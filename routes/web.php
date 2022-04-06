@@ -13,9 +13,13 @@ Route::get('/', function () {
 Route::get('/produtos', function () {
     return view('produto.produtos');
 });
-Route::get('/produtos/cadastro', function () {
+Route::get('/produto/cadastro', function () {
     return view('produto.cadastroProduto');
 });
+Route::get('/produtos/editar', function () {
+    return view('produto.editarProduto');
+});
+
 
 
 // | CONFIGURAÇÕES PRODUTOS

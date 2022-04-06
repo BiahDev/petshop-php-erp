@@ -5,7 +5,7 @@
 Produtos
 @endsection
 @section('subpagina')
-Cadastro do novo produto
+Editar o produto
 @endsection
 
 
@@ -17,8 +17,8 @@ Cadastro do novo produto
             <form action="" method="post">
                 <div class="card-header pb-0">
                     <div class="d-flex align-items-center">
-                        <p class="mb-0">Cadastrar o novo produto</p>
-                        <button type="submit" class="btn btn-primary btn-sm ms-auto">Cadastrar</button>
+                        <p class="mb-0">Editar o produto</p>
+                        <button type="submit" class="btn btn-primary btn-sm ms-auto">Salvar</button>
                     </div>
                 </div>
                 <div class="card-body">

@@ -117,19 +117,21 @@ Produto
             <div class="card-header pb-0">
                 <div class="row">
                     <div class="col-6 d-flex align-items-center">
-                      <h6 class="mb-3">Produtos</h6>
+                        <h6 class="mb-3">Produtos</h6>
                     </div>
                     <div class="col-6 text-end">
-                      <a class="btn bg-gradient-primary mb-3" href="/produtos/cadastro"><i class="fas fa-plus"></i>&nbsp;&nbsp;Novo produto</a>
+                        <a class="btn bg-gradient-primary mb-3" href="/produto/cadastro"><i
+                                class="fas fa-plus"></i>&nbsp;&nbsp;Novo produto</a>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
                 <div class="table-responsive p-0">
                     <table class="table align-items-center mb-0">
                         <thead>
                             <tr>
-                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 pl-2">Descrição
+                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 pl-2">
+                                    Descrição
                                 </th>
                                 <th class="text-uppercase text-secondary text-xs  font-weight-bolder opacity-7 ps-2">
                                     Código</th>
@@ -153,7 +155,16 @@ Produto
                                     <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
                                 </td>
                                 <td class="align-middle">
-                                    <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                                    <span class="text-secondary text-xs font-weight-bold">
+                                        <button type="button" class="btn btn-link text-danger text-gradient px-0 mb-0"
+                                            data-bs-toggle="modal" data-bs-target="#excluirModalProduto">
+                                            <i class="far fa-trash-alt me-2 h6"></i>
+                                        </button>
+                                        <a href="produtos/editar" class="btn btn-link text-dark px-0 mb-0">
+                                            <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
+                                        </a>
+
+                                    </span>
                                 </td>
                             </tr>
                         </tbody>
@@ -166,3 +177,4 @@ Produto
 </div>
 
 @endsection
+@include('produto.modal.produtoModal')
