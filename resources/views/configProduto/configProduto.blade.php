@@ -110,9 +110,9 @@ Configuração do produto
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold">
                                         <button type="button" class="btn btn-link text-danger text-gradient px-0 mb-0"
-                                        data-bs-toggle="modal" data-bs-target="#excluirModalSubCategoria">
-                                        <i class="far fa-trash-alt me-2 h6"></i>
-                                    </button>
+                                            data-bs-toggle="modal" data-bs-target="#excluirModalSubCategoria">
+                                            <i class="far fa-trash-alt me-2 h6"></i>
+                                        </button>
                                         <button type="button" class="btn btn-link text-dark px-0 mb-0"
                                             data-bs-toggle="modal" data-bs-target="#editarModalSubCategoria">
                                             <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
@@ -126,8 +126,6 @@ Configuração do produto
             </div>
         </div>
     </div>
-
-
     <div class="col-md-6 col-lg-4">
         <div class="card mb-4">
             <div class="card-header pb-0">
@@ -157,32 +155,36 @@ Configuração do produto
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($marcas as $row )
                             <tr>
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold px-2">
-                                        Alimentos
+                                        {{$row->marca}}
                                     </span>
                                 </td>
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold">
-                                        <button type="button" class="btn btn-link text-danger text-gradient px-0 mb-0"
-                                        data-bs-toggle="modal" data-bs-target="#excluirModalMarca">
-                                        <i class="far fa-trash-alt me-2 h6"></i>
-                                    </button>
-                                        <button type="button" class="btn btn-link text-dark px-0 mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#editarModalMarca">
+                                        <button type="button"
+                                            class="btn btn-link text-danger text-gradient px-0 mb-0 passador-do-input" data-bs-toggle="modal" 
+																						data-input="marcaIdExcluir" 
+																						data-valor="{{$row->id}}"
+																						data-bs-target="#excluirModalMarca">
+                                            <i class="far fa-trash-alt me-2 h6"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-link text-dark px-0 mb-0 passador-do-input" data-input="marcaEditar,marcaIdEditar" data-valor="{{$row->marca}}, {{$row->id}}"
+                                          data-bs-toggle="modal" data-bs-target="#editarModalMarca">
                                             <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
                                         </button>
                                     </span>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 @endsection
 

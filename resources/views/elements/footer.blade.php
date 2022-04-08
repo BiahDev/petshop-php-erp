@@ -14,7 +14,7 @@
 <script src="{{url('js/plugins/perfect-scrollbar.min.js')}}"></script>
 <script src="{{url('js/plugins/smooth-scrollbar.min.js')}}"></script>
 <script src="{{url('js/argon-dashboard.min.js')}}"></script>
-
+<script src="{{url('js/app.js')}}"></script>
 
 <script>
   var win = navigator.platform.indexOf('Win') > -1;

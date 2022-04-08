@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+use  App\Http\Controllers as Controllers;
 // | HOME
 Route::get('/', function () {
     return view('index');
@@ -23,9 +23,16 @@ Route::get('/produtos/editar', function () {
 
 
 // | CONFIGURAÇÕES PRODUTOS
-Route::get('/configproduto', function () {
-    return view('configProduto.configProduto');
-});
+
+Route::get('/configproduto', [Controllers\MarcasController::class, 'index']);
+Route::post('/configproduto/marca/cadastrar',[Controllers\MarcasController::class, 'cadastrarMarca'])->name('cadastrarMarca');
+
+Route::post('/configproduto/marca/editar',[Controllers\MarcasController::class, 'editarMarca'])->name('editarMarca');
+
+Route::delete('/configproduto/marca/excluir',[Controllers\MarcasController::class, 'excluirMarca'])->name('excluirMarca');
+
+
+
 
 // | ESTOQUE
 Route::get('/estoque', function () {
