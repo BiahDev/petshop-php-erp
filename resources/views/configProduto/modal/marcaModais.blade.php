@@ -83,11 +83,11 @@
                     <form action="{{route('excluirMarca')}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="hidden" id="marcaIdExcluir" name="id">
-												<button type="submit" class="btn btn-danger">Excluir</button>
-												<button type="button" class="btn btn-link text-primary ml-auto"
+                        <input type="hidden" name="id" id="marcaIdExcluir">
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                        <button type="button" class="btn btn-link text-primary ml-auto"
                         data-bs-dismiss="modal">Fechar</button>
-											</form>
+                    </form>
                 </div>
             </div>
         </div>

@@ -31,33 +31,39 @@ Configuração do produto
                             <tr>
                                 <th
                                     class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 pl-2 px-3">
-                                    Nome
+                                    Categoria
                                 </th>
                                 <th class=" text-uppercase text-secondary text-xs  font-weight-bolder opacity-7 ps-2">
-                                    Ações</th>
+                                    Ações
+                                </th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($categorias as $row)
                             <tr>
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold px-2">
-                                        Alimentos
+                                        {{$row->categoria}}
                                     </span>
                                 </td>
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold">
-                                        <button type="button" class="btn btn-link text-danger text-gradient px-0 mb-0"
+                                        <button type="button"
+                                            class="btn btn-link text-danger text-gradient px-0 mb-0 passador-do-input"
+                                            data-input="categoriaIdExcluir" data-valor="{{$row->id}}"
                                             data-bs-toggle="modal" data-bs-target="#excluirModalCategoria">
                                             <i class="far fa-trash-alt me-2 h6"></i>
                                         </button>
-                                        <button type="button" class="btn btn-link text-dark px-0 mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#editarModalCategoria">
+                                        <button type="button" class="btn btn-link text-dark px-0 mb-0 passador-do-input"
+                                            data-input="categoriaIdEditar,categoriaEditar"
+                                            data-valor="{{$row->id}},{{$row->categoria}}" data-bs-toggle="modal"
+                                            data-bs-target="#editarModalCategoria">
                                             <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
                                         </button>
-
                                     </span>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -87,7 +93,7 @@ Configuração do produto
                             <tr>
                                 <th
                                     class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 pl-2 px-3">
-                                    Nome
+                                    SubCategoria
                                 </th>
                                 <th
                                     class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 pl-2 px-3">
@@ -98,28 +104,36 @@ Configuração do produto
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach($subcategorias as $row)
                             <tr>
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold px-2">
-                                        Ração
+                                        {{$row->sub_categoria}}
                                     </span>
                                 </td>
                                 <td class="align-middle">
-                                    <span class="text-secondary text-xs font-weight-bold px-2">Alimento</span>
+                                    <span class="text-secondary text-xs font-weight-bold px-2">
+                                        {{$row->categoria}}
+                                    </span>
                                 </td>
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold">
-                                        <button type="button" class="btn btn-link text-danger text-gradient px-0 mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#excluirModalSubCategoria">
+                                        <button type="button"
+                                            class="btn btn-link text-danger text-gradient px-0 mb-0 passador-do-input"
+                                            data-bs-toggle="modal" data-valor="{{$row->id}}"
+                                            data-input="subCategoriaIdExcluir"
+                                            data-bs-target="#excluirModalSubCategoria">
                                             <i class="far fa-trash-alt me-2 h6"></i>
                                         </button>
-                                        <button type="button" class="btn btn-link text-dark px-0 mb-0"
-                                            data-bs-toggle="modal" data-bs-target="#editarModalSubCategoria">
+                                        <button type="button" class="btn btn-link text-dark px-0 mb-0 passador-do-input"
+                                            data-valor="{{$row->id}},{{$row->sub_categoria}},{{$row->id_categoria}}"
+                                            data-input="subCategoriaIdEditar,subCategoriaEditar,subCategoriaIdCategoriaEditar" data-bs-toggle="modal" data-bs-target="#editarModalSubCategoria">
                                             <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
                                         </button>
                                     </span>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
@@ -148,7 +162,7 @@ Configuração do produto
                             <tr>
                                 <th
                                     class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7 pl-2 px-3">
-                                    Nome
+                                    Marca
                                 </th>
                                 <th class=" text-uppercase text-secondary text-xs  font-weight-bolder opacity-7 ps-2">
                                     Ações</th>
@@ -165,14 +179,15 @@ Configuração do produto
                                 <td class="align-middle">
                                     <span class="text-secondary text-xs font-weight-bold">
                                         <button type="button"
-                                            class="btn btn-link text-danger text-gradient px-0 mb-0 passador-do-input" data-bs-toggle="modal" 
-																						data-input="marcaIdExcluir" 
-																						data-valor="{{$row->id}}"
-																						data-bs-target="#excluirModalMarca">
+                                            class="btn btn-link text-danger text-gradient /px-0 mb-0 passador-do-input"
+                                            data-bs-toggle="modal" data-input="marcaIdExcluir" data-valor="{{$row->id}}"
+                                            data-bs-target="#excluirModalMarca">
                                             <i class="far fa-trash-alt me-2 h6"></i>
                                         </button>
-                                        <button type="button" class="btn btn-link text-dark px-0 mb-0 passador-do-input" data-input="marcaEditar,marcaIdEditar" data-valor="{{$row->marca}}, {{$row->id}}"
-                                          data-bs-toggle="modal" data-bs-target="#editarModalMarca">
+                                        <button type="button" class="btn btn-link text-dark px-0 mb-0 passador-do-input"
+                                            data-input="marcaIdEditar,marcaEditar"
+                                            data-valor="{{$row->id}},{{$row->marca}}" data-bs-toggle="modal"
+                                            data-bs-target="#editarModalMarca">
                                             <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
                                         </button>
                                     </span>
