@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="{{url('css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
-    <link id="pagestyle" href="{{url('css/argon-dashboard.css')}}" rel="stylesheet" />
+    <link id="pagestyle" href="{{url('css/argon-dashboard.min.css')}}" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
