@@ -16,16 +16,37 @@ Route::get('/estoque', function () {
     return view('estoque.estoque');
 });
 
-// | ESTOQUE
-Route::get('/clientes', function () {
-    return view('cliente.clientes');
-});
+
+
+// | CLIENTE
 Route::get('/cliente/cadastro', function () {
     return view('cliente.cadastroCliente');
 });
 Route::get('/cliente/editar', function () {
     return view('cliente.editarCliente');
 });
+
+
+Route::get('/clientes', 
+[Controllers\ClientesController::class, 'index']);
+
+Route::post('/cliente/cadastro',
+[Controllers\ClientesController::class, 'cadastrarCliente'])
+->name('cadastrarCliente');
+
+Route::put('/cliente/editar/{id}',
+[Controllers\ClientesController::class, 'editarCliente'])
+->name('editarCliente');
+
+Route::get('/cliente/editar/{id}',
+[Controllers\ClientesController::class, 'detalheCliente'])
+->name('detalheCliente');
+
+Route::delete('/cliente/excluir',
+[Controllers\ClientesController::class, 'excluirCliente'])
+->name('excluirCliente');
+
+
 
 
 

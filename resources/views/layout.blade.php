@@ -10,7 +10,7 @@
         Petshop
     </title>
     <!--     Fonts and icons     -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" /> 
     <!-- Nucleo Icons -->
     <link href="{{url('css/nucleo-icons.css')}}" rel="stylesheet" />
     <link href="{{url('css/nucleo-svg.css')}}" rel="stylesheet" />
@@ -18,6 +18,7 @@
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="{{url('css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.5/fc-4.0.2/fh-3.2.2/r-2.2.9/sc-2.0.5/sl-1.3.4/datatables.min.css"/>
     <link id="pagestyle" href="{{url('css/argon-dashboard.min.css')}}" rel="stylesheet" />
 </head>
 

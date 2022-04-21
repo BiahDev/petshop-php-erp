@@ -16,18 +16,17 @@ class CreateClientesTable extends Migration
     Schema::create('clientes', function (Blueprint $table) {
       $table->id();
       $table->string('nome');
-      $table->string('sobrenome');
       $table->string('genero');
       $table->date('data_nascimento');
-      $table->string('instagram');
-      $table->string('telefone');
-      $table->string('whatsapp');
+      $table->string('telefone')->nullable();
+      $table->string('whatsapp')->nullable();
+      $table->string('email')->nullable();
       $table->string('cep');
-      $table->string('endereco');
-      $table->string('bairro');
-      $table->string('cidade');
-      $table->string('uf');
-      $table->text('observacao');
+      $table->string('endereco')->nullable();
+      $table->string('bairro')->nullable();
+      $table->string('cidade')->nullable();
+      $table->string('uf')->nullable();
+      $table->text('observacao')->nullable();
       $table->timestamps();
     });
   }
