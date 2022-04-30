@@ -26,12 +26,13 @@ Banho & Tosa - É um sistema de gestão para um petshop, vai desdo o frente de c
 
 ## 💫 Roadmap
 ### Back-end
-- [ ] Setup básico de pastas
+- [x] Setup básico de pastas
 - [ ] Crud das tabelas
 	- [ ] Estoque
 	- [ ] Produtos
+	- [ ] Configurações do produtos
 	- [ ] Vendedores
-	- [ ] Clientes
+	- [x] Clientes
 	- [ ] Transações
 	- [ ] Vendas
 	- [ ] Fornecedor
@@ -50,17 +51,17 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Front-end
 - Blade
-- Tamplaete X
+- Tamplate Argon Creative tim
 
 ### Back-end
 - PHP 7.4
-- Laravel
+- Laravel 8
 - MySql
 
 
 ### Utilitários
 -   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)** 
--   Teste de API:  **[Insomnia](https://insomnia.rest/)**
+-   BD: MySqlWorkBench
 
 
 <!-- ## 🛠 Como executar o projeto
