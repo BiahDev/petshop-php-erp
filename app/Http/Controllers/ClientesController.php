@@ -21,8 +21,7 @@ class ClientesController extends Controller
 
   public function cadastrarCliente(clienteFormRequest $request)
   {
-
-    $cliente = Cliente::create([
+    Cliente::create([
       'nome' => $request->nome,
       'data_nascimento' => $request->data_nascimento,
       'genero' => $request->genero,
@@ -35,18 +34,19 @@ class ClientesController extends Controller
       'cidade' => $request->cidade,
       'uf' => $request->uf,
       'observacao' => $request->observacao
-
     ]);
+
     $request->session()->flash(
         'mensagem',
-        "Cliente $cliente->nome criado com sucesso
-    ");
+        "Cliente $request->nome atulizado com sucesso"
+      );
+
     return redirect('clientes');
   }
 
   public function editarCliente(int $id, clienteFormRequest $request)
   {
-   $cliente = Cliente::find($id)
+    Cliente::find($id)
       ->update([
         'nome' => $request->nome,
         'data_nascimento' => $request->data_nascimento,
@@ -63,7 +63,7 @@ class ClientesController extends Controller
       ]);
       $request->session()->flash(
         'mensagem',
-        "Cliente $cliente->nome criado com sucesso
+        "Cliente $request->nome criado com sucesso
       ");
     return redirect('clientes');
   }
@@ -82,8 +82,6 @@ class ClientesController extends Controller
       "Cliente $cliente->nome foi removida com sucesso"
     );
     $cliente->delete();
-
-
 
     return redirect('clientes');
   }

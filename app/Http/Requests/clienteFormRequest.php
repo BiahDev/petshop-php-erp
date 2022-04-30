@@ -76,6 +76,9 @@ class clienteFormRequest extends FormRequest
         'min:1',
         'max:2'
       ],
+      'cep'=>[
+        'required',
+      ],
       'observacao' => [
         'nullable',
         'string',

@@ -3,11 +3,7 @@
 
 
 @section('pagina')
-
 Home
-@endsection
-@section('subpagina')
-Configuração do produto
 @endsection
 
 

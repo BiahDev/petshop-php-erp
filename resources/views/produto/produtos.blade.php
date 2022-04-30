@@ -165,7 +165,7 @@ Produto
                             data-bs-toggle="modal" data-bs-target="#excluirModalProduto">
                             <i class="far fa-trash-alt me-2 h6"></i>
                           </button>
-                          <a href="produtos/editar" class="btn btn-link text-dark px-0 mb-0">
+                          <a href="produto/editar" class="btn btn-link text-dark px-0 mb-0">
                             <i class="fas fa-pencil-alt text-dark me-2 h6"></i>
                           </a>
                           
